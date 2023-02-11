@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Online</title>
+    <style>
+
+        body {
+            font: normal 18pt Arial;
+            color: rgb(149, 94, 200);
+            background-color: black;
+        }
+
+        div#res {
+            margin-top: 15px;
+            margin-bottom: 60px;
+            color: aqua;
+        }
+
+        div#res2 {
+            margin-top: 15px;
+            margin-bottom: 60px;
+            color: orange;
+        }
+
+        div#res3 {
+            margin-top: 15px;
+            margin-bottom: 60px;
+            color: rgb(4, 238, 4);
+        }
+
+        div#res4 {
+            margin-top: 15px;
+            margin-bottom: 20px;
+            color: rgb(249, 0, 216);
+        }
+
+        div#adicao{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: aqua;
+        }
+
+        div#subtracao{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: orange;
+        }
+
+        div#multiplicacao{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: rgb(4, 238, 4);
+        }
+
+        div#divisao{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: rgb(249, 0, 216);
+        }
+
+        input {
+            font: normal 18pt Arial;
+            width: 140px;
+        }
+
+    </style>
+    
+    <h1>Calculadora</h1>
+
+    <!-- Calculadora de Soma -->
+    <div id = 'adicao'>Soma</div>
+    <input type = "number" name = "n1" id = "txtn1"> +
+    <input type = "number" name = "n2" id = "txtn2">
+    <input type = "button" value = "Somar" onclick = "soma()">
+    <div id = 'res' >A soma aparecerá aqui ;)</div>
+
+
+    <!-- Calculadora de Subtração -->
+    <div id = 'subtracao'>Subtração</div>
+    <input type = "number" name = "n3" id = "txtn3"> -
+    <input type = "number" name = "n4" id = "txtn4">
+    <input type = "button" value = "Subtrair" onclick = "subtrai()">
+    <div id = 'res2' >A divisão aparecerá aqui ;)</div>
+
+
+    <!-- Calculadora de Multiplicação -->  
+    <div id = 'multiplicacao'>Multiplicação</div> 
+    <input type = "number" name = "n5" id = "txtn5"> x
+    <input type = "number" name = "n6" id = "txtn6">
+    <input type = "button" value = "Multiplicar" onclick = "multiplica()">
+    <div id = 'res3' >A multiplicação aparecerá aqui ;)</div>
+
+
+    <!-- Calculadora de Divisão -->
+    <div id = 'divisao'>Divisão</div>
+    <input type = "number" name = "n7" id = "txtn7"> /
+    <input type = "number" name = "n8" id = "txtn8">
+    <input type = "button" value = "Dividir" onclick = "divide()">
+    <div id = 'res4' >A divisão aparecerá aqui ;)</div>
+    <script>
+
+        function soma(){
+            
+            var txtn1 = window.document.getElementById('txtn1')
+            var txtn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(txtn1.value)
+            var n2 = Number(txtn2.value)
+            var s = n1 + n2
+
+            if((txtn1.value && txtn2.value) == 0){
+                res.innerHTML = 'Nenhum valor digitado, por favor, digite os números'
+            } 
+            else{
+                res.innerHTML = `A soma entre ${n1} e ${n2} é <strong>${s}</strong>`
+            }
+        }
+
+
+        function subtrai(){
+            
+            var txtn3 = window.document.getElementById('txtn3')
+            var txtn4 = window.document.querySelector('input#txtn4')
+            var res = window.document.getElementById('res2')
+            var n3 = Number(txtn3.value)
+            var n4 = Number(txtn4.value)
+            var sub = n3 - n4
+
+            if((txtn3.value && txtn4.value) == 0){
+                res2.innerHTML = 'Nenhum valor digitado, por favor, digite os números'
+            } 
+            else{
+                res2.innerHTML = `A subtração entre ${n3} e ${n4} é <strong>${sub}</strong>`
+            }
+        }
+
+
+        function multiplica(){
+            
+            var txtn5 = window.document.getElementById('txtn5')
+            var txtn6 = window.document.querySelector('input#txtn6')
+            var res = window.document.getElementById('res3')
+            var n5 = Number(txtn5.value)
+            var n6 = Number(txtn6.value)
+            var m = n5 * n6
+
+            if((txtn5.value && txtn6.value) == 0){
+                res.innerHTML = 'Nenhum valor digitado, por favor, digite os números'
+            } 
+            else{
+                res.innerHTML = `A multiplicação entre ${n5} e ${n6} é <strong>${m}</strong>`
+            }
+        }
+
+
+        function divide(){
+            
+            var txtn7 = window.document.getElementById('txtn7')
+            var txtn8 = window.document.querySelector('input#txtn8')
+            var res = window.document.getElementById('res4')
+            var n7 = Number(txtn7.value)
+            var n8 = Number(txtn8.value)
+            var d = n7 / n8
+
+            if((txtn7.value && txtn8.value) == 0){
+                res.innerHTML = 'Nenhum valor digitado, por favor, digite os números'
+            } 
+            else{
+                res.innerHTML = `A multiplicação entre ${n7} e ${n8} é <strong>${d}</strong>`
+            }
+        }
+
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>
