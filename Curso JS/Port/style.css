@@ -107,7 +107,7 @@ body{
     max-width: 550px;
     margin-right: -200px;
     opacity: 0;
-    animation: zoomIn 1s ease forwards/*, floatImagem 4s ease-in-out infinite*/;
+    animation: zoomIn 1s ease forwards, floatImagem 4s ease-in-out infinite;
     animation-delay: 2s;
 }
 
@@ -214,7 +214,7 @@ body{
     }
 }
 
-/*@keyframes floatImagem{
+@keyframes floatImagem{
     0% {
         transform: translateY(0);
     }
@@ -224,4 +224,4 @@ body{
     100% {
         transform: translateY(0);
     }
-}*/
+}
